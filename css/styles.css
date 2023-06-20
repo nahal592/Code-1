@@ -180,6 +180,104 @@ a{
 }
 
 
+/* Buttons */
+
+.button{
+    align-items: center;
+    border-radius: 4rem;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 600;
+    height: 6rem;
+    justify-content: center;
+    margin: 3rem;
+    text-transform: uppercase;
+    width: 40rem;
+    white-space: nowrap;
+}
+
+.button--accent{
+    background: var(--color-accent);
+    color: white;
+}
+
+.button--accent:hover {
+    background: #fc5025;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.button--headings_border{
+    border: solid;
+    border-color: var(--color-headings);
+    color: var(--color-headings);
+    border-width: 2px;
+    
+}
+
+.button--headings_border:hover {
+    background: whitesmoke;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.button--headings {
+    background: var(--color-headings);
+    color: white;
+}
+
+.button--headings:hover {
+    background: #1f124a;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.button--secondary {
+    background: var(--color-secondary);
+    color: white;
+    width: 30.5rem;
+    height: 7rem;
+
+}
+
+.button--secondary:hover {
+    background: #18dcff;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (min-width: 1024px) {
+    .button {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Inputs */
+
+.input {
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    color: var(--color-headings);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+}
+
+::placeholder {
+    color: #cdcbd7;
+}
+
+@media screen and (min-width: 1024px) {
+    .input{
+        font-size: 1.5rem;
+    }
+}
+
+
+
 
 
 
