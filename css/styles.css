@@ -4,6 +4,8 @@
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-border: #ccc;
+    --border-radius: 30px;
 }
 
 /* Typography */
@@ -195,6 +197,8 @@ a{
     text-transform: uppercase;
     width: 40rem;
     white-space: nowrap;
+    margin-left: 1rem;
+
 }
 
 .button--accent{
@@ -248,6 +252,8 @@ a{
     transition: transform 0.3s ease;
 }
 
+
+
 @media screen and (min-width: 1024px) {
     .button {
         font-size: 1.5rem;
@@ -258,18 +264,44 @@ a{
 /* Inputs */
 
 .input {
-    border-radius: 30px;
-    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
     color: var(--color-headings);
     font-size: 2rem;
     outline: 0;
     padding: 1.5rem 3.5rem;
+    flex: 1;
+    border: none;
 }
 
 ::placeholder {
     color: #cdcbd7;
 }
 
+.input-group {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    height: 7rem;
+}
+
+
+.input-group .input {
+    border: 0;
+    padding: 1.5rem 1rem;
+}
+
+.button--input {
+    width: 17.1rem;
+    height: 6rem;
+    border: none;
+    margin: 4px;
+
+}
+
+
+  
 @media screen and (min-width: 1024px) {
     .input{
         font-size: 1.5rem;
