@@ -172,8 +172,12 @@ a{
     fill: var(--color-primary);
 }
 
+
+
+
+
 .icon-container {
-    background: #f3f9fa;
+    background: white;
     width: 64px;
     height: 64px;
     border-radius: 100%;
@@ -410,7 +414,24 @@ a{
 
 }
 
+/* Media */
 
+.media {
+    display: flex;
+}
+
+.media__title {
+    margin-top: 0;
+    font-size: 2.4rem;
+}
+
+.media__body {
+    margin: 0 2rem;
+}
+
+.media__image {
+    margin-top: 1rem;
+}
 
 
 
