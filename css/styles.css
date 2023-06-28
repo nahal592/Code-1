@@ -207,7 +207,6 @@ a{
     align-items: center;
     border-radius: 4rem;
     cursor: pointer;
-    display: flex;
     font-size: 1.8rem;
     font-weight: 600;
     height: 6rem;
@@ -217,8 +216,16 @@ a{
     width: 40rem;
     white-space: nowrap;
     margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.button .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 
 .button--accent{
@@ -280,6 +287,7 @@ a{
 
 .button--small {
     width: 20rem;
+    border: none;
 }
 
 
@@ -318,7 +326,8 @@ a{
 
 .input-group .input {
     border: 0;
-    padding: 1.5rem 1rem;
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
 }
 
 .button--input {
@@ -741,8 +750,6 @@ a{
 /* Hero */
 .hero {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    align-items: center;
-    
 }
 
 .hero__tagline {
@@ -757,7 +764,7 @@ a{
 }
 
 .hero__button {
-    transform: translateX(15rem);
+     margin: 0 auto;
 }
 
 
@@ -773,7 +780,38 @@ a{
     }
 
     .hero__button {
-        transform: none;
+        margin: 0;
     }
 }
+
+/* Domain Block */
+.domain__button {
+    margin: 0.5rem;
+    width: 17rem;
+}
+
+.block-domain .input-group {
+    box-shadow: 0 0 30px 20px #e6ebee;
+    margin: 4rem auto;
+    border: 0;
+    max-width: 670px;
+}
+
+.block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .block-domain__prices {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
 
