@@ -106,7 +106,7 @@ a{
 }
 
 .badge--primary {
-    background: var(--color-primary);
+    background: #126de4;
     color: white;
 }
 
@@ -228,6 +228,10 @@ a{
     vertical-align: middle;
 }
 
+.button--plan {
+    width: 40rem;
+}
+
 .button--accent{
     background: var(--color-accent);
     color: white;
@@ -258,6 +262,7 @@ a{
 .button--headings {
     background: var(--color-headings);
     color: white;
+    margin: 0;
 }
 
 .button--headings:hover {
@@ -381,69 +386,82 @@ a{
 
 
 /* Plans */
+.plan {
+    transition: transform .2s ease-out;
+}
+
+
 .plan__name {
     color: #fff;
     margin: 0;
     font-weight: 500;
-    font-size: 2.4rem ;
-}
-
-.plan__price {
+    font-size: 2.4rem;
+  }
+  
+  .plan__price {
     font-size: 6rem;
-}
-
-.plan__billing-cycle {
+  }
+  
+  .plan__billing-cycle {
     font-size: 2.4rem;
     font-weight: 300;
     opacity: 0.8;
     margin-right: 1rem;
-}
-
-
-.plan__description {
+  }
+  
+  .plan__description {
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 1px;
     display: block;
-}
-
-.plan .list__item {
+  }
+  
+  .plan .list__item {
     margin-bottom: 2rem;
-    margin-left: 3rem;
-}
+  }
 
-.plan--popular .card__header{
+  .plan--popular {
+    transform: scale(1.1);
+  }
+  
+  .plan--popular .card__header {
     position: relative;
-}
-
-.plan--popular .card__header::before {
+  }
+  
+  .plan--popular .card__header::before {
     content: url(../images/popular.svg);
-    width: 40px;    
+    width: 40px;
     display: inline-block;
     position: absolute;
     top: -6px;
     right: 5%;
-}
+  }
 
-@media screen and (min-width: 1024px) {
+  .plan:hover {
+    transform: scale(1.05);
+  }
+  
+  .plan--popular:hover {
+    transform: scale(1.15);
+  }
+  
+  @media screen and (min-width: 1024px) {
     .plan__name {
-        font-size: 1.4rem;
+      font-size: 1.4rem;
     }
-
+  
     .plan__price {
-        font-size: 5rem;
+      font-size: 5rem;
     }
-
+  
     .plan__billing-cycle {
-        font-size: 1.6rem;
+      font-size: 1.6rem;
     }
-
+  
     .plan__description {
-        font-size: 1.7rem
-        ;
+      font-size: 1.7rem;
     }
-
-}
+  }
 
 /* Media */
 
@@ -814,4 +832,51 @@ a{
     }
 }
 
+/* Plans Block */
+.card__body {
+    padding-left: 0;
+}
+
+.list__item {
+    margin-left: 3rem;
+}
+
+ .plan {
+    margin: 3rem;
+}
+
+
+.plan .button {
+    margin-left: 4rem;
+}
+
+.block-plans .grid {
+  gap: 1rem;
+}
+
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.block-plans {
+    padding: 0;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .plan {
+        max-width: 350px;
+    }
+
+    .plan .button {
+        max-width: 260px;
+    }
+
+    .block-plans {
+        margin-left: 10rem;
+        margin-top: 3rem;
+    }
+}
+  
 
